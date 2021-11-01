@@ -9,7 +9,13 @@ get '/secret' do
   'Apple!'
 end
 
-get '/cat' do
+get '/random-cat' do
+  @name = %w[Amigo Misty Almond].sample
   erb(:index)
-  @name = ["Amigo", "Misty", "Almond"].sample
+end
+
+get '/named-cat' do
+  p params[:name]
+  @name = params[:name]
+  erb(:index)
 end
