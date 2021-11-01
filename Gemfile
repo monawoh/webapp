@@ -1,4 +1,10 @@
 # frozen_string_literal: true
+require 'sinatra'
+require "sinatra/reloader"
+
+configure :production do
+  enable :reloader
+end
 
 source "https://rubygems.org"
 
