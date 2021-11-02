@@ -10,12 +10,12 @@ get '/secret' do
 end
 
 get '/random-cat' do
-  @name = %w[Amigo Misty Almond].sample
+  @nickname = %w[Amigo Misty Almond].sample
   erb(:index)
 end
 
 get '/named-cat' do
-  p params[:name]
-  @name = params[:name]
+  p params
+  @nickname = params[:nickname]
   erb(:index)
 end
